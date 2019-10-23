@@ -5,7 +5,9 @@ const geocode = require('./utils/geocode');
 const forecast = require('./utils/forecast');
 
 const app = express();
-const port = 3000;
+
+//Storing dynamic heroku port
+const port = process.env.PORT || 3000;
 
 //Defining paths to directories
 const publicPathDirectory = path.join(__dirname,'../public');
@@ -124,5 +126,5 @@ app.get('*', (req,res)=> {
 // Listening on port 3000
 
 app.listen(port, () => {
-    console.log('Web-Server is up and running on port 3000.');
+    console.log('Web-Server is up and running on port '+ port);
 });
