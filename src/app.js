@@ -124,5 +124,5 @@ app.get('*', (req,res)=> {
 // Listening on port 3000
 
 app.listen(port, () => {
-    console.log('Web-Server is up and running on port 3000');
+    console.log('Web-Server is up and running on port 3000.');
 });
